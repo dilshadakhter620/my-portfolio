@@ -1,0 +1,593 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Chat App</h1>
+        </div>
+        <div class="chat-box" id="chat-box">
+            
+        </div>
+        <div class="message-input">
+            <input type="text" id="message" placeholder="Type a message...">
+            <button id="sendButton" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilshad Akhter - Modern Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="bg-animation">
+    <div class="gradient-bg"></div>
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </div>
+
+  <!-- MODERN NAVIGATION -->
+  <nav id="desktop-nav" class="glass-nav">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Dilshad</span>
+        <span class="logo-accent">Akhter</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon"></i>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav" class="glass-nav">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Dilshad</span>
+        <span class="logo-accent">Akhter</span>
+      </div>
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()" class="nav-link">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()" class="nav-link">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" onclick="toggleMenu()" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" onclick="toggleMenu()" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="profile" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="profile-image-container">
+          <div class="profile-ring"></div>
+          <div class="profile-ring-2"></div>
+          <img src="dp.jpg" alt="Dilshad Akhter Profile" class="profile-image" />
+          <div class="profile-glow"></div>
+        </div>
+        <div class="hero-text">
+          <div class="hero-greeting">
+            <span class="greeting-text">Hello, I'm</span>
+            <div class="wave">👋</div>
+          </div>
+          <h1 class="hero-title">
+            <span class="title-main">Dilshad Akhter</span>
+            <div class="title-underline"></div>
+          </h1>
+          <p class="hero-subtitle">
+            <span class="typing-text">Frontend Developer</span>
+            <span class="cursor">|</span>
+          </p>
+          <p class="hero-description">
+            Crafting beautiful, responsive web experiences with modern technologies and creative design solutions.
+          </p>
+         
+
+                <div class="hero-buttons">
+                  <button class="btn btn-primary" onclick="window.open('my_resume.pdf')">
+                    <i class="fas fa-download"></i>
+                     Download CV
+                    </button>
+                    
+            <button class="btn btn-secondary" onclick="location.href='#contact'">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </button>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/dilshad-akhter-335459323/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/dilshad_akhter_/?hl=en" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://github.com/yourusername" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get To Know More</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <div class="image-frame">
+            <img src="proflePic.jpg" alt="Profile" class="about-pic" />
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+        <div class="about-info">
+          <div class="about-text">
+            <p class="about-description">
+              Hi, I’m Dilshad Akhter. I’m a MERN stack learner, upgrading my skills in MongoDB, Express.js, React, and Node.js, and building responsive web applications while learning modern web development
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Experience</h3>
+                <p>2+ years in Development</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <div class="stat-info">
+                <h3>Education</h3>
+                <p>BCA, Sister Nivedita University</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Explore My</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="experience-grid">
+        <div class="experience-card">
+          <div class="card-header">
+            <h3>Frontend Development</h3>
+            <div class="card-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fab fa-html5"></i>
+              </div>
+              <div class="skill-info">
+                <h4>HTML</h4>
+                <span class="skill-level experienced">Experienced</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <div class="skill-info">
+                <h4>CSS</h4>
+                <span class="skill-level experienced">Experienced</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fab fa-js-square"></i>
+              </div>
+              <div class="skill-info">
+                <h4>JavaScript</h4>
+                <span class="skill-level intermediate">Intermediate</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fab fa-react"></i>
+              </div>
+              <div class="skill-info">
+                <h4>React.js</h4>
+                <span class="skill-level basic">Basic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="experience-card">
+          <div class="card-header">
+            <h3>Additional Skills</h3>
+            <div class="card-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fab fa-python"></i>
+              </div>
+              <div class="skill-info">
+                <h4>Python</h4>
+                <span class="skill-level intermediate">Intermediate</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="skill-info">
+                <h4>C Language</h4>
+                <span class="skill-level intermediate">Intermediate</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fab fa-git-alt"></i>
+              </div>
+              <div class="skill-info">
+                <h4>Git/GitHub</h4>
+                <span class="skill-level experienced">Experienced</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <div class="skill-info">
+                <h4>MySQL</h4>
+                <span class="skill-level basic">Basic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+ <section id="major-project" class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Final Semester Final Project</span>
+        <h2 class="section-title">Student Management System ERP</h2>
+      </div>
+      
+      <div class="project-card" style="max-width: 900px; margin: 0 auto; border-radius: 40px; overflow: hidden; display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="project-image" style="height: 300px;">
+          <img src="ERP.png" alt="Student ERP" style="width: 100%; height: 100%; object-fit: cover;" />
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/dilshadakhter620/student-management-system-ERP-.git" target="_blank" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="http://dilshadakhter0.pythonanywhere.com" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-content" style="text-align: center; padding: 30px;">
+          <h3 class="project-title" style="font-size: 1.8rem; margin-bottom: 10px;">Full-Stack ERP System</h3>
+          <p class="project-description">A complete administrative solution for managing academic records, built with advanced backend logic and secure database management.</p>
+          <div class="project-tech" style="justify-content: center; margin-top: 15px;">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Django</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">PythonAnywhere</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Practice Lab</span>
+        <h2 class="section-title">Frontend Mini Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="weather.jpg.png" alt="Weather Web" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/yourusername/weather-web" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://charming-raindrop-bb00c7.netlify.app/" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Weather Web</h3>
+            <p class="project-description">A modern weather application with real-time data and beautiful UI.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="calculator.jpg.png" alt="Calculator" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/yourusername/calculator" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://sunny-empanada-38f52b.netlify.app/" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Calculator</h3>
+            <p class="project-description">A sleek and functional calculator with modern design principles.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="game.jpg.png" alt="Tic Tac Toe Game" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/yourusername/tictactoe-game" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://tictactoi-game.netlify.app" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Tic Tac Toe Game</h3>
+            <p class="project-description">Interactive game with smooth animations and smart AI opponent.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="flipkart clone.png" alt="Flipkart Clone" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/yourusername/flipkart-clone" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://flip-kart-replicate.netlify.app" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Flipkart Clone</h3>
+            <p class="project-description">E-commerce platform replica with modern UI and responsive design.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="flower.png" alt="Beautiful Flowers" />
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/yourusername/beautiful-flowers" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://transcendent-wisp-d80f3a.netlify.app" target="_blank" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Beautiful Flowers</h3>
+            <p class="project-description">Elegant flower showcase with stunning visuals and smooth interactions.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- CERTIFICATES SECTION -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Achievements</span>
+        <h2 class="section-title">Certificates</h2>
+      </div>
+      <div class="certificates-grid">
+        <div class="certificate-card">
+          <div class="certificate-image">
+            <img src="desing thinking.png" alt="Design Thinking Certificate" />
+            <div class="certificate-overlay">
+              <a href="https://coursera.org/verify/specialization/00WU7QU0HKGR" target="_blank" class="view-cert-btn">
+                <i class="fas fa-eye"></i>
+                View Certificate
+              </a>
+            </div>
+          </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">Design Thinking</h3>
+            <p class="certificate-issuer">Issued by Coursera</p>
+            <p class="certificate-date">2025</p>
+          </div>
+        </div>
+
+        <div class="certificate-card">
+          <div class="certificate-image">
+            <img src="dsa.png" alt="DSA Certificate" />
+            <div class="certificate-overlay">
+              <a href="https://coursera.org/verify/specialization/00WU7QU0HKGR" target="_blank" class="view-cert-btn">
+                <i class="fas fa-eye"></i>
+                View Certificate
+              </a>
+            </div>
+          </div>
+          <div class="certificate-content">
+            <h3 class="certificate-title">Data Structures & Algorithms</h3>
+            <p class="certificate-issuer">Issued by Coursera</p>
+            <p class="certificate-date">2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-details">
+              <h3>Email</h3>
+              <a href="/cdn-cgi/l/email-protection#b9ddd8d2d1cddccb88898cf9ded4d8d0d597dad6d4"><span class="__cf_email__" data-cfemail="92f6f3f9fae6f7e0a3a2a7d2f5fff3fbfebcf1fdff">[email&#160;protected]</span></a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="contact-details">
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/dilshad-akhter-335459323/" target="_blank">Connect with me</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form class="modern-form">
+            <div class="form-group">
+              <input type="text" id="name" required>
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required>
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Dilshad Akhter. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/dilshad-akhter-335459323/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/dilshad_akhter_/?hl=en" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
